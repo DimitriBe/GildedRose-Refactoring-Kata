@@ -28,7 +28,7 @@ final class GildedRose
         }
     }
 
-    private function getUpdater(Item $item): SulfurasUpdater|DefaultItemUpdater|BackstagePassUpdater|ConjuredUpdater|AgedBrieUpdater
+    private function getUpdater(Item $item): DefaultItemUpdater
     {
         return match ($item->name) {
             ItemNames::AGED_BRIE->value => new AgedBrieUpdater(),
